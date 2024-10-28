@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novela Visual</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #dialogo {
+            margin: 20px auto;
+            font-size: 1.5em;
+            max-width: 80%;
+            text-align: center;
+            color: #333;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .opcion {
+            display: block;
+            margin: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #6c63ff, #3f3d56);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2em;
+            color: white;
+            text-align: center;
+            width: 250px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .opcion:hover {
+            background: linear-gradient(135deg, #4f47c3, #2e2b40);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .opcion:active {
+            background: linear-gradient(135deg, #3f3d56, #2e2b40);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="600"></canvas>
+    <p id="texto-escena">inicio</p>
+    <div id="opciones">
+        
+        <button class="opcion">Opción 1</button>
+        <button class="opcion">Opción 2</button>
+    </div>
+
+    <script src="Main.js"></script>
+</body>
+</html>
