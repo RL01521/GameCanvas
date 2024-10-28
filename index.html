@@ -4,27 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Novela Visual</title>
+    <link rel="stylesheet" href="base.css">
     <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-        }
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-image: url('img/body1.jpg'); /* Reemplaza con la ruta de tu imagen */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-attachment: fixed; /* La imagen permanece fija mientras haces scroll */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centra la imagen */
+    background-color: #000; /* Color de fondo para rellenar los espacios alrededor de la imagen */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #ffffff; /* Color del texto en blanco para mejor contraste */
+}
 
-        canvas {
-            border: 1px solid black;
-            display: block;
-            margin: 0 auto;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+
+canvas {
+    border: 2px solid #444; /* Borde más grueso y de color oscuro */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: #000000; /* Fondo suave */
+    display: block;
+    margin: 20px auto; /* Centrado con margen superior e inferior */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+    padding: 10px; /* Espacio interno alrededor del contenido */
+    max-width: 90%; /* Ajuste responsivo para que no desborde en pantallas pequeñas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición para hover */
+}
+
+/* Efecto de zoom al pasar el cursor */
+canvas:hover {
+    transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
 
         #dialogo {
             margin: 20px auto;
@@ -39,33 +58,34 @@
         }
 
         .opcion {
-            display: block;
-            margin: 10px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #6c63ff, #3f3d56);
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.2em;
-            color: white;
-            text-align: center;
-            width: 250px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    display: block;
+    margin: 10px; /* Espacio alrededor del botón */
+    padding: 15px 30px;
+    background-color: #000; /* Fondo negro */
+    border: 2px solid #fff; /* Borde blanco */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #ffffff; /* Texto blanco */
+    text-align: center;
+    width: 250px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        .opcion:hover {
-            background: linear-gradient(135deg, #4f47c3, #2e2b40);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-            transform: translateY(-5px);
-        }
+.opcion:hover {
+    background-color: #333; /* Fondo gris oscuro al pasar el cursor */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
 
-        .opcion:active {
-            background: linear-gradient(135deg, #3f3d56, #2e2b40);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transform: translateY(0);
-        }
+.opcion:active {
+    background-color: #222; /* Fondo un poco más oscuro al hacer clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}
+
     </style>
 </head>
 <body>

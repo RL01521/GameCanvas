@@ -30,6 +30,14 @@ const personajes = {
         alto: 300,   // Alto de la imagen
     },
 
+    prota2: {
+        imagen: 'img/p1.png',  // Ruta de la imagen del personaje
+        x: 300,  // Posición x en el canvas
+        y: 300, // Posición y en el canvas
+        ancho: 150,  // Ancho de la imagen
+        alto: 300,   // Alto de la imagen
+    },
+
     prota1: {
         imagen: 'img/p1.png',  // Ruta de la imagen del personaje
         x: 800,  // Posición x en el canvas
@@ -44,6 +52,14 @@ const personajes = {
         y: 300, // Posición y en el canvas
         ancho: 300,  // Ancho de la imagen
         alto: 400,   // Alto de la imagen
+    },
+
+    n1a: {
+        imagen: 'img/p2.1.png',  // Ruta de la imagen del personaje
+        x: 580,  // Posición x en el canvas
+        y: 250, // Posición y en el canvas
+        ancho: 300,  // Ancho de la imagen
+        alto: 450,   // Alto de la imagen
     },
 
     n2: {
@@ -279,7 +295,16 @@ const escenas = {
         fondo: 'img/fondo6.jpg',
         personajes: [personajes.prota, personajes.n2a],
         opciones: [
-            {texto: "Si, presentamelo a ver que proponen los ciudadanos", escenaSiguiente: 'presentar',},
+            {texto: "Si, presentamelo a ver que proponen los ciudadanos", escenaSiguiente: 'presentar'},
+        ]
+    },
+
+    presentar: {
+        texto: "Hola me presento, soy el encardo de el cuidado de la naturaleza y el medioambiente como promotor.",
+        fondo: 'img/fondo6.jpg',
+        personajes: [personajes.prota2, personajes.n2a, personajes.n1a],
+        opciones: [
+            {texto: "Si, presentamelo a ver que proponen los ciudadanos", escenaSiguiente: 'presentar'},
         ]
     },
 

@@ -1,0 +1,35 @@
+#texto-escena {
+    font-size: 1.5em; /* Tamaño de letra más grande */
+    color: #ffffff; /* Color blanco para el texto sobre fondo negro */
+    background-color: #000000; /* Fondo negro */
+    margin: 20px auto;
+    width: 90%; /* Ancho adaptable al tamaño de pantalla */
+    max-width: 800px; /* Máximo ancho para pantallas grandes */
+    height: auto; /* Ajusta la altura automáticamente */
+    padding: 20px; /* Margen interno para evitar que el texto se acerque al borde */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para darle relieve */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra el texto verticalmente */
+    justify-content: center; /* Centra el texto horizontalmente */
+    text-align: center; /* Centra el texto dentro del cuadro */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    #texto-escena {
+        font-size: 1.3em; /* Reduce un poco el tamaño de fuente en pantallas pequeñas */
+        padding: 15px;
+        max-width: 90%; /* Ajusta el ancho al 90% en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #texto-escena {
+        font-size: 1.2em; /* Ajusta el tamaño de fuente para pantallas muy pequeñas */
+        padding: 10px;
+        max-width: 95%; /* Máximo ancho en pantallas móviles pequeñas */
+    }
+}
