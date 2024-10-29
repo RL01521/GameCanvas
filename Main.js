@@ -487,6 +487,63 @@ function cargarEscena(escenaId) {
         boton.onclick = () => cargarEscena(opcion.escenaSiguiente);
         opcionesDiv.appendChild(boton);
     });
+
+    // Selecciona el elemento de audio para la música de fondo
+const musicaFondo = document.getElementById('musicaFondo');
+
+// Define la música de fondo para cada escena
+const musicaPorEscena = {
+    leerlo: 'aud/p5.3.mp3',
+    piensas: 'aud/p5.2.mp3'
+ 
+    // Agrega más escenas y sus canciones aquí
+};
+
+// Función para cambiar la música de fondo según la escena
+function cambiarMusica(escenaId) {
+    const nuevaMusica = musicaPorEscena[escenaId];
+    if (nuevaMusica && musicaFondo.src !== nuevaMusica) {
+        musicaFondo.src = nuevaMusica;
+        musicaFondo.play().catch(error => console.log("Error al reproducir la música:", error));
+    }
+}
+
+document.getElementById('leerlo').addEventListener('click', () => {
+    cambiarMusica('leerlo'); // Cambia la música a la de la escena "inicio"
+});
+
+document.getElementById('piensas').addEventListener('click', () => {
+    cambiarMusica('piensas'); // Cambia la música a la de la escena "inicio"
+});
+
+// Función modificada para cargar la escena
+function cargarEscena(escenaId) {
+    const escena = escenas[escenaId];
+    
+    // Cambiar el fondo y dibujar los personajes después de cargar el fondo
+    cambiarFondo(escena.fondo, escena.personajes);
+
+    // Mostrar el texto de la escena
+    document.getElementById('texto-escena').innerText = escena.texto;
+
+    // Mostrar las opciones
+    const opcionesDiv = document.getElementById('opciones');
+    opcionesDiv.innerHTML = '';  // Limpiar las opciones anteriores
+
+    escena.opciones.forEach(opcion => {
+        const boton = document.createElement('button');
+        boton.innerText = opcion.texto;
+        boton.classList.add('opcion');
+        boton.onclick = () => cargarEscena(opcion.escenaSiguiente);
+        opcionesDiv.appendChild(boton);
+    });
+
+    // Cambiar la música de fondo
+    cambiarMusica(escenaId);
+    
+}
+
+    
 }
 
 // Cargar la primera escena
