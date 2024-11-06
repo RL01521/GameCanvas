@@ -510,7 +510,7 @@ const escenas = {
     },
 
     casac3: {
-        texto: "Esa pequeña acción como el panfleto logro despertar algo en mi y hizo que pudiera realiza un cambio para bien.",
+        texto: "Esa pequeña acción como el panfleto logro despertar algo en mi y hizo que pudiera realizar un cambio para bien.",
         fondo: 'img/fondo2.png',
         personajes: [personajes.prota2],
         opciones: [
