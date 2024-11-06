@@ -14,10 +14,10 @@
     align-items: center; /* Centra el texto verticalmente */
     justify-content: center; /* Centra el texto horizontalmente */
     text-align: center; /* Centra el texto dentro del cuadro */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    box-sizing: border-box; 
 }
 
-/* Estilos responsive */
+
 @media (max-width: 768px) {
     #texto-escena {
         font-size: 1.3em; /* Reduce un poco el tamaño de fuente en pantallas pequeñas */
@@ -26,10 +26,4 @@
     }
 }
 
-@media (max-width: 480px) {
-    #texto-escena {
-        font-size: 1.2em; /* Ajusta el tamaño de fuente para pantallas muy pequeñas */
-        padding: 10px;
-        max-width: 95%; /* Máximo ancho en pantallas móviles pequeñas */
-    }
-}
+
